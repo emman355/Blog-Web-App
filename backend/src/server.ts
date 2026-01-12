@@ -2,7 +2,7 @@ import 'dotenv/config'; // Load .env variables
 
 import express from 'express';
 import cors from 'cors';
-import { env } from 'config/env.js';
+import { env } from '@config/env.js';
 // --- CONFIGURATION ---
 const app = express();
 const port = env.PORT;
