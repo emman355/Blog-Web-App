@@ -1,33 +1,33 @@
 {
   "compilerOptions": {
-    /* Language and Environment */
-    "target": "ES2022",                  // Modern JS output compatible with Node 20
-    "module": "NodeNext",                  // Use native ES modules
-    "moduleResolution": "NodeNext",      // Proper resolution for ESM in Node
-    "lib": ["ES2022"],                   // Standard library features
-
-    /* Paths and Output */
-    "rootDir": "src",                    // Source files live here
-    "outDir": "dist",                    // Compiled output goes here
-    "baseUrl": "./src",                  // Simplify imports with absolute paths
-
-    /* Type Safety */
-    "strict": true,                      // Enable all strict type checks
-    "noImplicitAny": true,               // Prevent implicit `any`
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "paths": {
+      "@config/*": ["config/*"],
+      "@modules/*": ["modules/*"],
+      "@db/*": ["db/*"],
+      "@utils/*": ["utils/*"]
+    },
+    "strict": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true,                // Faster builds, skip type checking of node_modules
-
-    /* Interop */
-    "esModuleInterop": true,             // Allow default imports from CommonJS
+    "skipLibCheck": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,           // Import JSON files directly
-
-    /* Node Types */
-    "types": ["node"],                   // Include Node.js type definitions
-
-    /* Source Maps for Debugging */
-    "sourceMap": true
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "sourceMap": true,
+    "declaration": true,
+    "incremental": true
   },
-  "include": ["src"],                    // Compile everything in src/
-  "exclude": ["node_modules", "dist"]    // Ignore build output and deps
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
 }
