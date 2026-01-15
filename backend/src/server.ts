@@ -12,7 +12,7 @@ const port = env.PORT;
 // --- MIDDLEWARE ---
 app.use(cors());
 app.use(express.json());
-app.use("/api/notes", blogRouter);
+app.use("/api/blog", blogRouter);
 
 // Global error handler (must be last)
 app.use(errorMiddleware);
