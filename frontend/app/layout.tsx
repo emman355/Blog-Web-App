@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -20,8 +21,6 @@ export const metadata: Metadata = {
   description:
     "Next.js blog app with TypeScript, Redux, Tailwind CSS, shadcn/ui, Express APIs, Supabase, and Drizzle ORM.",
 };
-
-import { ThemeProvider } from "@/components/theme-provider"
 
 export default function RootLayout({
   children,

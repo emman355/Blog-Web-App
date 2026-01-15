@@ -32,7 +32,7 @@ export async function updateSession(request: NextRequest) {
     }
   )
 
- // refreshing the auth token
+  // refreshing the auth token
   const {
     data: { session },
   } = await supabase.auth.getSession()
@@ -40,7 +40,7 @@ export async function updateSession(request: NextRequest) {
   const user = session?.user
 
   const pathname = request.nextUrl.pathname;
-  const publicRoutes = ["/sign-in", "/sign-up", "/auth/callback"];
+  const publicRoutes = ["/sign-in", "/sign-up", "/auth/callback", "/", "/logout"];
 
   // 1. Unauthenticated → redirect to sign-in
   if (!user && !publicRoutes.includes(pathname)) {
